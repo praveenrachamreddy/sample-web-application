@@ -55,11 +55,11 @@
 	<distributionManagement>
     <snapshotRepository>
       <id>nexusdeploymentrepo</id>
-      <url>http://nexus-cicd-demo.apps.cluster-l6w4r.l6w4r.sandbox1563.opentlc.com/repository/hosted-repo/</url>
+      <url>http://nexus-praveenkumar-reddy.apps.ocp4.imss.com/repository/hosted-repo/</url>
     </snapshotRepository>
 	<repository>
 	  <id>nexusdeploymentrepo</id>
-      <url>http://nexus-cicd-demo.apps.cluster-l6w4r.l6w4r.sandbox1563.opentlc.com/repository/hosted-repo/</url>
+      <url>http://nexus-praveenkumar-reddy.apps.ocp4.imss.com/repository/hosted-repo/</url>
     </repository>
   
   </distributionManagement>
