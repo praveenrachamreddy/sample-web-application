@@ -41,8 +41,8 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
            <properties>
-               <sonar.host.url>https://sonarqube-1-cicd-demo.apps.cluster-l6w4r.l6w4r.sandbox1563.opentlc.com/</sonar.host.url>
-	             <sonar.login>eaecf6c49a22d974a28e905da8422eed4658a9db</sonar.login>
+               <sonar.host.url>https://sonarqube-praveenkumar-reddy.apps.ocp4.imss.com</sonar.host.url>
+	       <sonar.login>sqp_285485edbb787f7b5333ef577dfbaf5320f0f243</sonar.login>
                <sonar.projectName>ci-pipeline</sonar.projectName>
                <sonar.projectVersion>main</sonar.projectVersion>
                <sonar.test.exclusions>**/test/**/*.*</sonar.test.exclusions>
