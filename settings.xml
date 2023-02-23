@@ -16,7 +16,7 @@
     <mirror>
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
-      <url>http://nexus-cicd-demo.apps.cluster-l6w4r.l6w4r.sandbox1563.opentlc.com/repository/proxy-repo/</url>
+      <url>http://nexus-praveenkumar-reddy.apps.ocp4.imss.com/repository/proxy-repo/</url>
     </mirror>
   </mirrors>
   <profiles>
@@ -36,7 +36,7 @@
        <repository>
          <id>nexus-snapshot-repo</id>
          <name>your custom repo</name>
-         <url>http://nexus-cicd-demo.apps.cluster-l6w4r.l6w4r.sandbox1563.opentlc.com/repository/hosted-repo/</url>
+         <url>http://nexus-praveenkumar-reddy.apps.ocp4.imss.com/repository/hosted-repo/</url>
        </repository>      
      </repositories>
           
@@ -47,7 +47,7 @@
        <repository>
          <id>nexus-release-repo</id>
          <name>your custom repo</name>
-         <url>http://nexus-cicd-demo.apps.cluster-l6w4r.l6w4r.sandbox1563.opentlc.com/repository/hosted-repo/</url>
+         <url>http://nexus-praveenkumar-reddy.apps.ocp4.imss.com/repository/hosted-repo/</url>
        </repository>
      </repositories>
    </profile>
