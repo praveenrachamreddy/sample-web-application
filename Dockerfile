@@ -9,3 +9,4 @@ COPY target/WebApp.war .
 
 # Start the Tomcat server
 CMD ["catalina.sh", "run"]
+
