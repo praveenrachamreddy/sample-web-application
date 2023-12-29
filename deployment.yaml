@@ -1,0 +1,63 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: spring-boot-mongo-docker-git
+  namespace: fuse-pipelines 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-boot-mongo-docker-git
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: spring-boot-mongo-docker-git
+        deployment: spring-boot-mongo-docker-git
+    spec:
+      containers:
+        - name: spring-boot-mongo-docker-git
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/fuse-pipelines/spring-boot-mongo-docker-git@sha256:47ed3865f25d1b47b87a2af93ce946fb7766c3ffdbd7ec2030df586477a37535
+          resources: {}
+          
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: spring-boot-mongo-docker-git
+  namespace: fuse-pipelines
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
+  selector:
+    app: spring-boot-mongo-docker-git
+    deployment: spring-boot-mongo-docker-git
+
+---
+
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: spring-boot-mongo-docker-git
+  namespace: fuse-pipelines
+spec:
+  host: spring-boot-mongo-docker-git-fuse-pipelines.apps.ocp4.imss.work
+  to:
+    kind: Service
+    name: spring-boot-mongo-docker-git
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
+
+          
+  
